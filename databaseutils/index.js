@@ -28,7 +28,7 @@ var SongsCountSchema = new Schema({
   count: Number
 });
 
-var connection = mongoose.createConnection('mongodb://localhost:27017/songs');
+var connection = mongoose.createConnection('mongodb://admin:1111@ds023438.mlab.com:23438/songs');
 
 var song = connection.model('songs', SongSchema);
 var songsCount = connection.model('songsCount', SongsCountSchema);

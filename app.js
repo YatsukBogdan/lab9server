@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({limit: '5mb'}));
 
-mongoose.connect('mongodb://localhost:27017/hp');
+mongoose.connect('mongodb://admin:1111@ds023438.mlab.com:23438/songs');
 app.use(expressSession({
     secret: 'a4f8071f-c873-4447-8ee2',
     cookie: { maxAge: 2628000000 },
