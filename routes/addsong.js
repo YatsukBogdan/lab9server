@@ -12,6 +12,11 @@ function logMessage(msg) {
 }
 
 router.post('/', (req, res) => {
+  var songs = new songsCount({
+    name: 'counter',
+    count: 0
+  });
+  songs.save((err) => {});
   songsCount.findOne({
     name: 'counter'
   }, (err, songs_count) => {
